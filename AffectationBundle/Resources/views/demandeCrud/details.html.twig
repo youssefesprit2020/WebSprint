@@ -1,0 +1,10 @@
+{% extends 'baseback.html.twig' %}
+
+{% block body %}
+<center>
+{{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+{{ form_widget(form) }}
+<a href="{{ path('demandeCrud_read') }}"> <input type="button" value="Annuler"> </a>
+{{ form_end(form) }}
+</center>
+{% endblock %}

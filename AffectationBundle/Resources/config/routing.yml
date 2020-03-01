@@ -1,0 +1,55 @@
+affectation_homepage:
+    path:     /
+    defaults: { _controller: AffectationBundle:Default:index }
+
+affectationCrud_read:
+    path:     /affectationLecture
+    defaults: { _controller: AffectationBundle:Affectation:read }
+
+affectationCrud_ajout:
+    path:     /affectationAjout
+    defaults: { _controller: AffectationBundle:Affectation:new }
+
+affectationCrud_modification:
+    path:     /affectationModification{id}
+    defaults: { _controller: AffectationBundle:Affectation:edit }
+
+affectationCrud_suppression:
+    path:     /affectationSuppression{id}
+    defaults: { _controller: AffectationBundle:Affectation:delete }
+
+affectationCrud_details:
+    path:     /affectationDetails{id}
+    defaults: { _controller: AffectationBundle:Affectation:show }
+
+demandeCrud_read:
+    path:     /demandeLecture
+    defaults: { _controller: AffectationBundle:Demande:read }
+
+demandeCrud_ajout:
+    path:     /demandeAjout
+    defaults: { _controller: AffectationBundle:Demande:new }
+
+demandeCrud_modification:
+    path:     /demandeModification{id}
+    defaults: { _controller: AffectationBundle:Demande:edit }
+
+demandeCrud_suppression:
+    path:     /demandeSuppression{id}
+    defaults: { _controller: AffectationBundle:Demande:delete }
+
+demandeCrud_details:
+    path:     /demandeDetails{id}
+    defaults: { _controller: AffectationBundle:Demande:show }
+
+donationCrud_donate:
+    path:     /donationArgent
+    defaults: { _controller: AffectationBundle:Donation:donate }
+
+donationCrud_sucess:
+    path:     /sucess
+    defaults: { _controller: AffectationBundle:Donation:sucess }
+
+donationCrud_echec:
+    path:     /echec
+    defaults: { _controller: AffectationBundle:Donation:echec }

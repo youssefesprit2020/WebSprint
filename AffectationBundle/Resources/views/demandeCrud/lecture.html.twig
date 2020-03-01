@@ -1,0 +1,40 @@
+{% extends 'baseback.html.twig' %}
+
+{% block body %}
+<center>
+
+    {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Rechercher">
+    <a href="{{ path('demandeCrud_read') }}"> <input type="button" value="Annuler"> </a>
+    {{ form_end(form) }}
+
+    <table border="5px">
+
+        <th>Identifiant</th>
+        <th>Remarque</th>
+        <th>Etat</th>
+        <th>Cas</th>
+        <th>Date Demande</th>
+        <th>Action</th>
+
+        {% for i in demandes %}
+            <tr>
+                <td>{{ i.id }} </td>
+                <td>{{ i.remarque }} </td>
+                <td>{{ i.etat }} </td>
+                <td>{{ i.cas }} </td>
+                <td>{{ i.date | date }} </td>
+
+                <td><a href="{{ path('demandeCrud_details',{id:i.id}) }}"> Details </a></br>
+                    <a href="{{ path('demandeCrud_modification',{id:i.id}) }}"> Modifier </a> </br>
+                    <a href="{{ path('demandeCrud_suppression',{id:i.id}) }}"> Supprimer </a></td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+    </br></br>
+    <a href="{{ path('demandeCrud_ajout') }}"> Ajouter une affectation ! </a>
+</center>
+{% endblock %}
